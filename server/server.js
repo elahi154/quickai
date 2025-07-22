@@ -10,9 +10,7 @@ const app = express();
 
 await connectCloudinary();
 
-app.use(cors(
-  
-));
+app.use(cors());
 app.use(express.json());
 app.use(clerkMiddleware())
 app.use('/api/ai',aiRouter)

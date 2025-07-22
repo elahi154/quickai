@@ -36,7 +36,8 @@ const RemoveObject = () => {
           }
       
     } catch (error) {
-      toast.error(error.message || 'Failed to generate image')
+      const message = error.response?.data?.message || error.message || 'An error occurred while generating the image';
+        toast.error(message);
     }
     setLoading(false)
   }

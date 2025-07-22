@@ -27,11 +27,12 @@ const ReviewResume = () => {
           if(data.success){
             setContent(data.content)
           } else {
-            toast.error(data.message || 'Failed to generate image')
+            toast.error(data.message || 'Failed to review resume')
           }
       
     } catch (error) {
-      toast.error(error.message || 'Failed to generate image')
+      const message = error.response?.data?.message || error.message || 'An error occurred while generating the image';
+        toast.error(message);
     }
     setLoading(false)
   }

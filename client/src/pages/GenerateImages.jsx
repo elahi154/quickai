@@ -37,7 +37,10 @@ const GenerateImages = () => {
           }
           
         } catch (error) {
-          toast.error(error.message || 'An error occurred while generating the image')
+          
+         const message = error.response?.data?.message || error.message || 'An error occurred while generating the image';
+        toast.error(message);
+
         }
         setLoading(false)
       }
