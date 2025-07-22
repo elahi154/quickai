@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+*{
+    font-family: "Manrope", sans-serif;
+}
+@theme{
+    --color-primary:#5044E5;
+}
+
+.reset-tw, .reset-tw *{
+    all: revert !important;
+}
+.cl-drawerRoot {
+    z-index: 10;
+}
