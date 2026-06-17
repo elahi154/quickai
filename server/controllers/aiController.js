@@ -47,10 +47,15 @@ export const generateArticle = async (req, res) => {
         res.json({success: true, content});
         
     } catch (error) {
-        console.log(error.message);
-        res.json({success: false, message: error.message});
-        
-    }
+  console.error("Status:", error.status);
+  console.error("Response:", error.response?.data);
+  console.error("Message:", error.message);
+
+  res.status(500).json({
+    success: false,
+    message: error.message,
+  });
+}
 }
 
 export const generateBlogTitles = async (req, res) => {
