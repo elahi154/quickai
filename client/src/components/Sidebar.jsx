@@ -56,7 +56,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
       <aside
         className={`
           fixed md:static
-          top-14 left-0 bottom-0
+          top-1 left-0 bottom-0
           z-40
           w-60 bg-white border-r border-gray-200
           flex flex-col justify-between
